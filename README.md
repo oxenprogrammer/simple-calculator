@@ -26,7 +26,9 @@ To get a local copy up and running follow these simple example steps.
 2. ``` cd simple-calculator ```
 3. ``` git checkout  feature/milestone-1```
 4. ``` npm i ```
-5. ``` npm run start ```
+5. ```npm run build ```
+6. ``` npm run start ```
+7. Open your favorite browser @ ```127.0.0.1:8080```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
