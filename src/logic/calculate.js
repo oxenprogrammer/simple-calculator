@@ -1,3 +1,5 @@
+import operate from "./operate";
+
 const calculate = (calculator = {}, buttonName) => {
   let { total, next, operation } = calculator;
 
@@ -9,7 +11,7 @@ const calculate = (calculator = {}, buttonName) => {
     };
   }
 
-  return { total, next, operation };
+  return operate({ total, next, operation });
 };
 
 export default calculate;
