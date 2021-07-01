@@ -5,7 +5,7 @@ const DisplayComponent = ({ result }) => {
 };
 
 DisplayComponent.defaultProps = {
-  result: "O",
+  result: "0",
 };
 
 DisplayComponent.propTypes = { result: PropTypes.string.isRequired };
