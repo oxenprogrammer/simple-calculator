@@ -68,14 +68,6 @@ const calculate = (calculator = {}, buttonName) => {
     };
   }
 
-  if (buttonName === "%") {
-    return {
-      ...calculator,
-      total: total / 100,
-      next: next / 100,
-    };
-  }
-
   return { total, next, operation };
 };
 
