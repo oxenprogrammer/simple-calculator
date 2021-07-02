@@ -14,7 +14,7 @@ const operate = (numberOne, numberTwo, operation) => {
     case "÷":
       try {
         bigNumberOne.div(bigNumberTwo);
-        return bigNumberOne.div(bigNumberTwo).toString();
+        return Math.round(bigNumberOne.div(bigNumberTwo)*1000000.0)/1000000.0.toString();
       } catch (err) {
         return "Error, Division by 0 Forbidden";
       }

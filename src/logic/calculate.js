@@ -22,17 +22,10 @@ const calculate = (calculator = {}, buttonName) => {
     };
   }
 
-  if (buttonName === ".") {
-    if (operation === null) {
-      return {
-        ...calculator,
-        total: total === null ? buttonName : total + buttonName,
-      };
+  if (buttonName === '.') {
+    if (!next.includes('.')) {
+      next += buttonName;
     }
-    return {
-      ...calculator,
-      next: next === null ? buttonName : next + buttonName,
-    };
   }
 
   if (numbers.includes(buttonName)) {
