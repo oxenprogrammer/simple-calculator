@@ -8,6 +8,6 @@ DisplayComponent.defaultProps = {
   result: "0",
 };
 
-DisplayComponent.propTypes = { result: PropTypes.string.isRequired };
+DisplayComponent.propTypes = { result: PropTypes.string };
 
 export default DisplayComponent;
