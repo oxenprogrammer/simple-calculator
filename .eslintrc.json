@@ -6,6 +6,7 @@
     "plugin:jsx-a11y/recommended",
     "prettier"
   ],
+  "parser": "babel-eslint",
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
