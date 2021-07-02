@@ -1,7 +1,7 @@
 import ButtonComponent from "./button.component";
 import React from "react";
 
-const ButtonPanelComponent = ({ handleClick }) => {
+const ButtonPanelComponent = ({ clickHandler }) => {
   const buttonNames = [
     "AC",
     "+/-",
@@ -10,7 +10,7 @@ const ButtonPanelComponent = ({ handleClick }) => {
     "7",
     "8",
     "9",
-    "x",
+    "X",
     "4",
     "5",
     "6",
@@ -25,10 +25,10 @@ const ButtonPanelComponent = ({ handleClick }) => {
   ];
 
   return (
-    <React.Fragment className="button-panel">
+    <React.Fragment>
       {buttonNames.map((buttonName) => (
         <ButtonComponent
-          clickHandler={handleClick}
+          clickHandler={clickHandler}
           buttonName={buttonName}
           key={buttonName}
         />
