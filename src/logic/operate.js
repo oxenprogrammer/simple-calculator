@@ -1,15 +1,15 @@
 import Big from "big.js";
 
 const operate = (numberOne, numberTwo, operation) => {
-  const bigNumberOne = Big(numberOne);
-  const bigNumberTwo = Big(numberTwo);
+  const bigNumberOne = numberOne ? Big(numberOne) : null;
+  const bigNumberTwo = numberTwo ? Big(numberTwo) : null;
 
   switch (operation) {
     case "+":
       return bigNumberOne.plus(bigNumberTwo).toString();
     case "-":
       return bigNumberOne.minus(bigNumberTwo).toString();
-    case "x":
+    case "X":
       return bigNumberOne.times(bigNumberTwo).toString();
     case "÷":
       try {
