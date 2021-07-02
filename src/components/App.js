@@ -15,17 +15,22 @@ class App extends React.Component {
       operation: null,
     };
   }
+  
+  handleClick = (buttonName) => {
+    const calculator = calculate(this.state, buttonName);
+    this.setState({ ...calculator });
+  };
 
   render() {
-    handleClick = (buttonName) => {
-      const calculator = calculate(this.state, buttonName);
-      this.setState({ ...calculator });
-    };
+
+    const { total, next, operation } = this.state;
+    let result;
+    result = operation === null? total : next === null ? operation : next;
 
     return (
       <React.Fragment className="App">
-        <DisplayComponent />
-        <ButtonPanelComponent />
+        <DisplayComponent result={result} />
+        <ButtonPanelComponent clickHandler={this.handleClick} />
       </React.Fragment>
     );
   }
