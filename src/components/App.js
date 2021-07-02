@@ -15,7 +15,7 @@ class App extends React.Component {
       operation: null,
     };
   }
-  
+
   handleClick = (buttonName) => {
     const calculator = calculate(this.state, buttonName);
     this.setState({ ...calculator });

@@ -58,13 +58,13 @@ const calculate = (calculator = {}, buttonName) => {
     }
   }
 
-  if (buttonName === '=') {
+  if (buttonName === "=") {
     if (total && !next) {
       const result = total;
       total = result;
     }
     if (!total && !next) {
-      total = '0';
+      total = "0";
     }
     if (total && next && operation) {
       total = operate(total, next, operation);
