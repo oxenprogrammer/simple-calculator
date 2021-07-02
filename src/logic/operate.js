@@ -19,7 +19,7 @@ const operate = (numberOne, numberTwo, operation) => {
         return "Error, Division by 0 Forbidden";
       }
     case "%":
-      return bigNumberOne.div(100).toString();
+      return bigNumberOne.mod(bigNumberTwo).toString();
     default:
       return "0";
   }
