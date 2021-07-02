@@ -1,17 +1,13 @@
-# Milestone 1 
+## Simple Calculator
+This is a simple calculator built with ReactJs. The purpose is to use React Class Component without hooks in order to get familiar with legacy code.
 
-> Setting a React App, Installing Big.js and Deploying App to Heroku.
+## Screenshot
+![Screenshot](./Screenshot.png)
 
-
-## Tools To Work With
-
-- Node.js
-- React
-- React-DOM
-- React-Create-App
-- npm
-- React
-- Heroku
+## Technology
+- ReactJs
+- Material UI
+- JavaScript
 
 ## Live Demo
 
