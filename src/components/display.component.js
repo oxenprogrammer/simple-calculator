@@ -13,7 +13,6 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-
 const DisplayComponent = ({ result }) => {
   const classes = useStyles();
   return <div className={classes.display}>{result}</div>;

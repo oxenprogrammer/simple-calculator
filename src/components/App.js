@@ -6,8 +6,8 @@ import { withStyles } from "@material-ui/styles";
 
 const styles = () => ({
   root: {
-   border: "1px solid black",
-   backgroundColor: "gray",
+    border: "1px solid black",
+    backgroundColor: "gray",
   },
 });
 
