@@ -6,13 +6,24 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 import calculate from "../logic/calculate";
 
-const App = () => {
-  return (
-    <React.Fragment className="App">
-      <DisplayComponent />
-      <ButtonPanelComponent />
-    </React.Fragment>
-  );
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    }
+  }
+  
+  render() {
+    return (
+      <React.Fragment className="App">
+        <DisplayComponent />
+        <ButtonPanelComponent />
+      </React.Fragment>
+    );
+  }
+}
 
 export default App;
