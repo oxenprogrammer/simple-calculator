@@ -2,7 +2,7 @@
 This is a simple calculator built with ReactJs. The purpose is to use React Class Component without hooks in order to get familiar with legacy code.
 
 ## Screenshot
-![Screenshot](./Screenshot.png)
+![Screenshot](./calculator.gif)
 
 ## Technology
 - ReactJs
