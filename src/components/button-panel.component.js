@@ -1,39 +1,57 @@
 import ButtonComponent from "./button.component";
+import Grid from "@material-ui/core/Grid";
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
-const ButtonPanelComponent = () => {
+const useStyles = makeStyles(() => ({
+  root: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, auto)",
+    gridGap: 2,
+    // flexWrap: "nowrap",
+    // height: 50,
+    // width: 50,
+    // border: "1px solid red",
+    // display: "flex",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+}));
+
+const ButtonPanelComponent = ({ clickHandler }) => {
+  const buttonNames = [
+    "AC",
+    "+/-",
+    "%",
+    "÷",
+    "7",
+    "8",
+    "9",
+    "X",
+    "4",
+    "5",
+    "6",
+    "-",
+    "1",
+    "2",
+    "3",
+    "+",
+    "0",
+    ".",
+    "=",
+  ];
+
+  const classes = useStyles();
   return (
-    <React.Fragment className="button-panel">
-      <div className="group">
-        <ButtonComponent buttonName="AC" />
-        <ButtonComponent buttonName="+/-" />
-        <ButtonComponent buttonName="%" />
-        <ButtonComponent buttonName="÷" />
-      </div>
-      <div className="group">
-        <ButtonComponent buttonName={7} />
-        <ButtonComponent buttonName={8} />
-        <ButtonComponent buttonName={9} />
-        <ButtonComponent buttonName="X" />
-      </div>
-      <div className="group">
-        <ButtonComponent buttonName={4} />
-        <ButtonComponent buttonName={5} />
-        <ButtonComponent buttonName={6} />
-        <ButtonComponent buttonName="-" />
-      </div>
-      <div className="group">
-        <ButtonComponent buttonName={1} />
-        <ButtonComponent buttonName={2} />
-        <ButtonComponent buttonName={3} />
-        <ButtonComponent buttonName="+" />
-      </div>
-      <div className="group">
-        <ButtonComponent buttonName={0} />
-        <ButtonComponent buttonName="." />
-        <ButtonComponent buttonName={"="} />
-      </div>
-    </React.Fragment>
+    <Grid container className={classes.root}>
+      {buttonNames.map((buttonName) => (
+        <ButtonComponent
+          clickHandler={clickHandler}
+          buttonName={buttonName}
+          key={buttonName}
+        />
+      ))}
+    </Grid>
   );
 };
 

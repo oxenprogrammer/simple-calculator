@@ -22,17 +22,10 @@ const calculate = (calculator = {}, buttonName) => {
     };
   }
 
-  if (buttonName === ".") {
-    if (operation === null) {
-      return {
-        ...calculator,
-        total: total === null ? buttonName : total + buttonName,
-      };
+  if (buttonName === '.') {
+    if (!next.includes('.')) {
+      next += buttonName;
     }
-    return {
-      ...calculator,
-      next: next === null ? buttonName : next + buttonName,
-    };
   }
 
   if (numbers.includes(buttonName)) {
@@ -59,13 +52,18 @@ const calculate = (calculator = {}, buttonName) => {
   }
 
   if (buttonName === "=") {
-    const result = operate(total, next, operation);
-    return {
-      ...calculator,
-      total: result,
-      next: null,
-      operation: null,
-    };
+    if (total && !next) {
+      const result = total;
+      total = result;
+    }
+    if (!total && !next) {
+      total = "0";
+    }
+    if (total && next && operation) {
+      total = operate(total, next, operation);
+      next = null;
+      operation = null;
+    }
   }
 
   return { total, next, operation };
