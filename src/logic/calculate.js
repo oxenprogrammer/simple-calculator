@@ -22,8 +22,8 @@ const calculate = (calculator = {}, buttonName) => {
     };
   }
 
-  if (buttonName === '.') {
-    if (!next.includes('.')) {
+  if (buttonName === ".") {
+    if (!next.includes(".")) {
       next += buttonName;
     }
   }
