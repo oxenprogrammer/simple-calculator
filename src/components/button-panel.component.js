@@ -8,13 +8,6 @@ const useStyles = makeStyles(() => ({
     display: "grid",
     gridTemplateColumns: "repeat(4, auto)",
     gridGap: 2,
-    // flexWrap: "nowrap",
-    // height: 50,
-    // width: 50,
-    // border: "1px solid red",
-    // display: "flex",
-    // justifyContent: "center",
-    // alignItems: "center",
   },
 }));
 

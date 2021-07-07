@@ -1,45 +1,41 @@
+import React, { useState } from "react";
+
 import ButtonPanelComponent from "./button-panel.component";
 import DisplayComponent from "./display.component";
-import React from "react";
 import calculate from "../logic/calculate";
-import { withStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = () => ({
+const useStyles = makeStyles(() => ({
   root: {
     border: "1px solid black",
     backgroundColor: "gray",
   },
-});
+}));
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+const App = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  handleClick = (buttonName) => {
-    const calculator = calculate(this.state, buttonName);
-    this.setState({ ...calculator });
+  const { total, next } = state;
+  const handleClick = (buttonName) => {
+    const calculator = calculate(state, buttonName);
+    setState({ ...calculator });
   };
 
-  render() {
-    const { classes } = this.props;
-    const { total, next } = this.state;
-    const result = next ? next && next.toString() : total && total.toString();
+  const classes = useStyles();
+  const result = next ? next && next.toString() : total && total.toString();
 
-    return (
-      <React.Fragment>
-        <div className={classes.root}>
-          <DisplayComponent result={result} />
-          <ButtonPanelComponent clickHandler={this.handleClick} />
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <React.Fragment>
+      <div className={classes.root}>
+        <DisplayComponent result={result} />
+        <ButtonPanelComponent clickHandler={handleClick} />
+      </div>
+    </React.Fragment>
+  );
+};
 
-export default withStyles(styles)(App);
+export default App;
