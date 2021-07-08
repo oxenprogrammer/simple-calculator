@@ -21,4 +21,10 @@ describe("Calculate logic", () => {
     const newData = calculate(data, "=");
     expect(newData.total).toEqual("25");
   });
+
+  it("should subtract numbers", () => {
+    const data = { total: 17, next: 5, operation: "-" };
+    const newData = calculate(data, "=");
+    expect(newData.total).toEqual("12");
+  });
 });
