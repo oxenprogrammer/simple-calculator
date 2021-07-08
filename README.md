@@ -1,5 +1,5 @@
 ## Simple Calculator
-This is a simple calculator built with ReactJs. The purpose is to use React Class Component without hooks in order to get familiar with legacy code.
+This is a simple calculator built with ReactJs. The purpose is to use React Class Component without hooks in order to get familiar with legacy code. It later refactors the class components into functional components using React Hooks.
 
 ## Screenshot
 ![Screenshot](./calculator.gif)
@@ -28,6 +28,9 @@ To get a local copy up and running follow these simple example steps.
 8. Open your favorite browser @ ```127.0.0.1:8080```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Test
+- Run `npm run test` to test the app.
 
 
 ### Prerequisites
