@@ -3,13 +3,15 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   display: {
-    height: "5rem",
+    height: "6rem",
     borderRadius: "1rem",
     color: "#ffffff",
-    fontSize: "2rem",
+    fontSize: "4rem",
+    fontWeight: "bold",
     display: "flex",
     marginLeft: "1rem",
     alignItems: "center",
+    textAlign: "right",
   },
 }));
 

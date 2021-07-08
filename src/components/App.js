@@ -9,6 +9,12 @@ const useStyles = makeStyles(() => ({
   root: {
     border: "1px solid black",
     backgroundColor: "gray",
+    width: "29rem",
+    justifyContent: "center",
+    alignSelf: "center",
+    "@media(max-width: 480px)": {
+      width: "20rem",
+    }
   },
 }));
 
