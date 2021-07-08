@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     alignSelf: "center",
     "@media(max-width: 480px)": {
       width: "20rem",
-    }
+    },
   },
 }));
 

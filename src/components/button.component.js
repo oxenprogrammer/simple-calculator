@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
     "@media(max-width: 480px)": {
       height: "4.8rem",
       width: "4.8rem",
-    }
+    },
   },
 }));
 
