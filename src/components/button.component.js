@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   button: {
-    height: "5rem",
-    width: "5rem",
+    height: "7rem",
+    width: "7rem",
     fontSize: "2rem",
     display: "flex",
     justifyContent: "center",
@@ -16,6 +16,10 @@ const useStyles = makeStyles(() => ({
     },
     "&:last-child": {
       width: "200%",
+    },
+    "@media(max-width: 480px)": {
+      height: "4.8rem",
+      width: "4.8rem",
     },
   },
 }));
