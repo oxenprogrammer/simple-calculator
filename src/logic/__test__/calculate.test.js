@@ -33,4 +33,10 @@ describe("Calculate logic", () => {
     const newData = calculate(data, "=");
     expect(newData.total).toEqual(2.4);
   });
+
+  it("should return modulo", () => {
+    const data = { total: 12, next: 5, operation: "%" };
+    const newData = calculate(data, "=");
+    expect(newData.total).toEqual("2");
+  });
 });
