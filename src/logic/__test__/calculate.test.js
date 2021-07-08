@@ -27,4 +27,10 @@ describe("Calculate logic", () => {
     const newData = calculate(data, "=");
     expect(newData.total).toEqual("12");
   });
+
+  it("should divide numbers", () => {
+    const data = { total: 12, next: 5, operation: "÷" };
+    const newData = calculate(data, "=");
+    expect(newData.total).toEqual(2.4);
+  });
 });
