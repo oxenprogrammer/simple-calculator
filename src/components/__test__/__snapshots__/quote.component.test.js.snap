@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote Component should render correctly 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-card-1"
+>
+  <img
+    alt="Beauty of mathematics"
+    src="qoute.jpg"
+  />
+</WithStyles(ForwardRef(Card))>
+`;
