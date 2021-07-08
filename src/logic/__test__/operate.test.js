@@ -10,4 +10,9 @@ describe("Operate logic", () => {
     const add = operate("1", "1", "-");
     expect(add).toBe("0");
   });
+
+  it("should divide", () => {
+    const add = operate("1", "1", "÷");
+    expect(add).toBe(1);
+  });
 });
